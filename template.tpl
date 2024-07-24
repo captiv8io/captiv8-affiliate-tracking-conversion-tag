@@ -273,7 +273,7 @@ const products = items.map(function (product) {
     }
 
     let category_id = product.categoryId || product.categoryID || product.item_category_id;
-    if(color) {
+    if(category_id) {
       attributes.push({
         id: 'category_id',
         title: 'Category ID',
