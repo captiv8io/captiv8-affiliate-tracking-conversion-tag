@@ -224,7 +224,6 @@ ___TEMPLATE_PARAMETERS___
 ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 
 const log = require('logToConsole');
-log('data =', data);
 
 const JSON = require('JSON');
 const getType = require('getType');
@@ -264,7 +263,7 @@ const products = items.map(function (product) {
     }
 
     let size = product.size || product.item_size;
-    if(color) {
+    if(size) {
       attributes.push({
         id: 'size',
         title: 'Size',
@@ -313,8 +312,6 @@ const products = items.map(function (product) {
   };
 });
 
-log('products =', products);
-
 const transaction = {
   id: data.transaction_id,
   currency: data.transaction_currency,
@@ -328,8 +325,6 @@ const transaction = {
   is_new_customer: data.transaction_is_new_customer
 };
 
-log('transaction =', transaction);
-
 const c8data = {
   page: 'PAGE_FINALIZATION',
   c8aid: data.c8aid || 0,
@@ -338,12 +333,10 @@ const c8data = {
   is_debug: data.is_debug,
 };
 
-log('c8data =', c8data);
-
-setInWindow("c8data", c8data, true);
+setInWindow('c8data', c8data, true);
 
 const injectScript = require('injectScript');
-injectScript("https://s.c8.io/px/pixel.min.js", data.gtmOnSuccess(), data.gtmOnFailure());
+injectScript('https://s.c8.io/px/pixel.min.js', data.gtmOnSuccess(), data.gtmOnFailure());
 
 
 ___WEB_PERMISSIONS___
