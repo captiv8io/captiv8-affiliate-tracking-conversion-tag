@@ -263,7 +263,7 @@ const products = items.map(function (product) {
     }
 
     let size = product.size || product.item_size;
-    if(color) {
+    if(size) {
       attributes.push({
         id: 'size',
         title: 'Size',
