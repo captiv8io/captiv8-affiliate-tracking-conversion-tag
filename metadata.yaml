@@ -2,9 +2,12 @@ homepage: "https://captiv8.io"
 documentation: "https://docs.captiv8.io"
 versions:
   # Latest version
+  - sha: 685780209318acea5d5eda94f179c3fdd3b11281
+    changeNotes: Fix multiple library injection
+
+  # Previous versions
   - sha: 579502aa5a4668f91cd914f494162567023ffdd1
     changeNotes: Debug output removed
 
-  # Previous versions
   - sha: 5ffa69848c890059ff9b9142028a15aceefc5ee1
     changeNotes: Initial Version
