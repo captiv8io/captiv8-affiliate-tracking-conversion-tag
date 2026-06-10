@@ -336,7 +336,7 @@ const c8data = {
 setInWindow('c8data', c8data, true);
 
 const injectScript = require('injectScript');
-injectScript('https://s.c8.io/px/pixel.min.js', data.gtmOnSuccess(), data.gtmOnFailure());
+injectScript('https://s.c8.io/px/pixel.conversion.min.js', data.gtmOnSuccess(), data.gtmOnFailure());
 
 
 ___WEB_PERMISSIONS___
